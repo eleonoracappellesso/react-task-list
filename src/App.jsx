@@ -1,6 +1,7 @@
 //import './App.css'
 import HeaderComponent from '../components/HeaderComponent';
 import NotCompletedTask from '../components/NotCompletedTask';
+import CompletedTask from '../components/CompletedTask';
 
 function App() {
   // parte logica
@@ -10,17 +11,19 @@ function App() {
     <>
       <HeaderComponent />
       <main>
-        <h2>Current tasks ()</h2>
+        <h3>Current tasks ({NotCompletedTask().length})</h3>
         <ul>
           <NotCompletedTask />
         </ul>
-        <h2>Completed tasks</h2>
+        <hr />
+        <h3>Completed tasks ({CompletedTask().length})</h3>
         <ul>
-
+          <CompletedTask />
         </ul>
       </main>
     </>
   )
 }
 
-export default App
+export default App;
+
