@@ -1,15 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import tasks from '../models/tasks'
+import HeaderComponent from '../components/HeaderComponent';
 
 function App() {
+  // parte logica
 
-
+  // html
   return (
     <>
+      <HeaderComponent />
+      <main>
+        <h2>Current tasks ({currentTasks.length})</h2>
+        <ul>
 
+        </ul>
+      </main>
     </>
   )
 }
