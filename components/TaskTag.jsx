@@ -9,8 +9,7 @@ function TaskTag({ task }) {
                     backgroundColor: 'green',
                     color: 'white',
                     padding: '5px 10px',
-                    borderRadius: '5px',
-                    fontWeight: 'bold',
+                    fontWeight: 'light'
                 }}
             >
                 Completed
@@ -24,8 +23,7 @@ function TaskTag({ task }) {
                     backgroundColor: 'blue',
                     color: 'white',
                     padding: '5px 10px',
-                    borderRadius: '5px',
-                    fontWeight: 'bold',
+                    fontWeight: 'light'
                 }}
             >
                 In progress
@@ -39,8 +37,7 @@ function TaskTag({ task }) {
                     backgroundColor: 'red',
                     color: 'white',
                     padding: '5px 10px',
-                    borderRadius: '5px',
-                    fontWeight: 'bold',
+                    fontWeight: 'bold'
                 }}
             >
                 Backlog
@@ -54,8 +51,7 @@ function TaskTag({ task }) {
                     backgroundColor: 'grey',
                     color: 'white',
                     padding: '5px 10px',
-                    borderRadius: '5px',
-                    fontWeight: 'bold',
+                    fontWeight: 'bold'
                 }}
             >
                 Undefined State
