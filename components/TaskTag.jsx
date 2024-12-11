@@ -1,11 +1,10 @@
 import tasks from "../models/tasks";
-
 function TaskTag({ task }) {
 
-    if (tasks.state === 'completed') {
+    if (task.state === 'completed') {
         return (
             <span
-                key={tasks.id}
+                key={task.id}
                 style={{
                     backgroundColor: 'green',
                     color: 'white',
@@ -17,10 +16,10 @@ function TaskTag({ task }) {
                 Completed
             </span>
         );
-    } else if (tasks.state === 'in_progress') {
+    } else if (task.state === 'in_progress') {
         return (
             <span
-                key={tasks.id}
+                key={task.id}
                 style={{
                     backgroundColor: 'blue',
                     color: 'white',
@@ -32,10 +31,10 @@ function TaskTag({ task }) {
                 In progress
             </span>
         );
-    } else if (tasks.state === 'backlog') {
+    } else if (task.state === 'backlog') {
         return (
             <span
-                key={tasks.id}
+                key={task.id}
                 style={{
                     backgroundColor: 'red',
                     color: 'white',
@@ -50,7 +49,7 @@ function TaskTag({ task }) {
     } else {
         return (
             <span
-                key={tasks.id}
+                key={task.id}
                 style={{
                     backgroundColor: 'grey',
                     color: 'white',
