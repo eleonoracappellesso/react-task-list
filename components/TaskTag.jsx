@@ -1,10 +1,11 @@
 import tasks from "../models/tasks";
 
 function TaskTag() {
-    let tag = tasks.forEach((task) => {
+    let tag = tasks.map((task) => {
         if (task.state === 'completed') {
             return (
                 <span
+                    key={task.id}
                     style={{
                         backgroundColor: 'green',
                         color: 'white',
@@ -19,6 +20,7 @@ function TaskTag() {
         } else if (task.state === 'in_progress') {
             return (
                 <span
+                    key={task.id}
                     style={{
                         backgroundColor: 'blue',
                         color: 'white',
@@ -33,6 +35,7 @@ function TaskTag() {
         } else if (task.state === 'backlog') {
             return (
                 <span
+                    key={task.id}
                     style={{
                         backgroundColor: 'red',
                         color: 'white',
@@ -47,6 +50,7 @@ function TaskTag() {
         } else {
             return (
                 <span
+                    key={task.id}
                     style={{
                         backgroundColor: 'grey',
                         color: 'white',
@@ -60,7 +64,7 @@ function TaskTag() {
             );
         }
     })
-    return tag;
+    return <div>{tag}</div>;
 }
 
 export default TaskTag;
