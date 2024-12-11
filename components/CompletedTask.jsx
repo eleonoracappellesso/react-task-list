@@ -1,4 +1,5 @@
 import tasks from "../models/tasks";
+import TaskTag from "./TaskTag";
 
 function CompletedTask() {
     let tasksCompleted = [];
@@ -7,7 +8,7 @@ function CompletedTask() {
     }).map((task) => {
         return (
             <li key={task.id}>
-                <h4>{task.title}</h4>
+                <h4>{task.title} <TaskTag /></h4>
                 <p>Priority: {task.priority}</p>
                 <p>Est time {task.estimatedTime}</p>
             </li>
